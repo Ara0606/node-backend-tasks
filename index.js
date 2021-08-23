@@ -27,3 +27,15 @@ app.get("/tasks", (req, res, next) => {
 app.listen(3000, () => {
     console.log("Servidor HTTP funcionando");
 });
+
+app.get("/tasks/:id",(req, res) => {
+    const fou = tasks.find(element => element.id ==req.params.id);
+    res.send(fou);
+    console.log(fou)
+});
+app.delete("/tasks/:id",(req, res,next)=> {
+    const found = tasks.find(element => element.id ==req.params.id);
+    console.log(found+'found');
+    tasks.splice(found,1);
+    res.send('eliminado');
+});
