@@ -14,9 +14,11 @@ content-Type: application/json
 ### Listado de tareas
 GET http://localhost:3000/tasks/1
 ###content-Type: application/json
+### eliminar tarea
+
 DELETE http://localhost:3000/tasks/1
 ###editar tarea
 
-### eliminar tarea
+
 ### marcar completo
 ### marcar pendiente

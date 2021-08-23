@@ -33,7 +33,7 @@ app.get("/tasks/:id",(req, res) => {
     res.send(fou);
     console.log(fou)
 });
-app.delete("/tasks/:id",(req, res,next)=> {
+app.delete("/tasks/:id",(req, res)=> {
     const found = tasks.find(element => element.id ==req.params.id);
     console.log(found+'found');
     tasks.splice(found,1);
